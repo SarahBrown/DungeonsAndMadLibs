@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<style>
+  body {
+    background-image: url(assets/background.png);
+    background-color: #97f9ff;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+  }
+
+  #octocat {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+  }
+
+  #textBox{
+    width: 600px;
+    height: 600px;
+    background-color: #f4dfbb;
+    border: 3px solid black;
+    border-radius: 5px;
+    margin: 5px auto;
+
+    font-size: 20px;
+    font-weight: bold;
+    font-family: CustomFont, sans-serif;
+
+    text-align: center;
+
+    box-shadow: 5px 10px;
+  }
+
+  #madlib{
+    font-size:15px;
+    font-family: CustomFont, sans-serif;
+    text-align: center;
+    line-height: 2.5;
+    margin: 5px;
+  }
+
+  #dicepage{
+    font-size:15px;
+    font-family: CustomFont, sans-serif;
+    text-align: center;
+    line-height: 2.5;
+    margin: 5px;
+  }
+
+  input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+
+  table{
+    width: 80%;
+    font-family: CustomFont, sans-serif;
+    font-size: 20px;
+    color: black;
+    margin: auto;
+    position: center;
+  }
+</style>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="description" content="Random Story with Dungeons">
+  <title>Mad Dragons</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/socket.io-client@2/dist/socket.io.js"></script>
+  <script src="js/index.js"></script>
+</head>
+
+<body onload="setup()">
+  <div id="octocat">
+    <a href="https://github.com/SarahBrown/hacklahoma20-idea3"><img src="assets/GitHub-Mark-64px.png"></a>
+  </div>
+
+  <div id="textBox">
+    <p>
+        A Random, Crazy, Wacky, Mad Adventure!
+    </p>
+
+    <div id="madlib">
+      <p>
+        Fill out your madlibs style character sheet and discover the beginning of your story!
+      </p>
+
+      <form onsubmit="return continueFirst(event)">
+        <table>
+          <tr> 
+            <td>Noun: </td>
+            <td><input type="text" id="noun1" name="noun1"></td>
+          </tr>
+
+          <tr> 
+            <td>Animal: </td>
+            <td><input type="text" id="animal" name="animal"></td>
+          </tr>
+
+          <tr> 
+            <td>Mineral: </td>
+            <td><input type="text" id="mineral" name="mineral"></td>
+          </tr>
+
+          <tr> 
+            <td>Noun: </td>
+            <td><input type="text" id="noun2" name="noun2"></td>
+          </tr>
+
+          <tr> 
+            <td>Noun: </td>
+            <td><input type="text" id="noun3" name="noun3"></td>
+          </tr>
+
+          <tr> 
+            <td>Noun: </td>
+            <td><input type="text" id="noun4" name="noun4"></td>
+          </tr>
+        </table>
+        <button onclick="return continueFirst(event)">Continue</button>
+      </form>
+    </div>
+
+    <div id="dicepage" style="visibility:collapse">
+      <p>
+        Roll the dice into the tray to finish generating your random adventure! Click Capture to capture the dice and then Continue.
+      </p>
+
+      <p id="diceFromResults">
+
+      </p>
+  
+      <button onclick="captureDice()">Capture</button>
+      <button onclick="continueSecond()">Continue</button>
+    </div>
+
+    <div id="resultspage" style="visibility:collapse">
+      <p>
+        Your adventure awaits!
+      </p>
+
+      <p id="storyParagraph">
+        COMPLETE ADVENTURE HERE :)
+      </p>
+    </div>
+</div>
+    
+</body>
+
+</html>
