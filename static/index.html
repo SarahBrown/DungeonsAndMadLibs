@@ -7,6 +7,8 @@
     background-attachment: fixed;
     background-position: center;
     background-size: 100%;
+    background-repeat: no-repeat;
+
   }
 
   #octocat {
@@ -15,30 +17,37 @@
     bottom: 10px;
   }
 
-  #leftSide {
-    left: 10px;
-    width: 30%;
-    position: absolute;
+  #textBox{
+    width: 600px;
+    height: 600px;
+    background-color: #f4dfbb;
+    border: 3px solid black;
+    border-radius: 5px;
+    margin: 5px auto;
+
+    font-size: 20px;
+    font-weight: bold;
+    font-family: CustomFont, sans-serif;
+
+    text-align: center;
+
+    box-shadow: 5px 10px;
   }
 
-  #middle {
-    right: 30%;
-    width: 40%;
-    position: absolute;
-  }
-
-  #rightSide {
-    right: 10px;
-    width: 25%;
-    position: absolute;
+  #madlib{
+    font-size:15px;
+    font-family: CustomFont, sans-serif;
+    text-align: center;
+    line-height: 2.5;
+    margin: 5px;
   }
 </style>
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="description" content="Help stemmy the flower out">
-  <title>Stemmy The Flower</title>
+  <meta name="description" content="Random Story with Dungeons">
+  <title>Mad Dragons</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/qtip2/3.0.3/basic/jquery.qtip.min.css">
   <link rel="stylesheet" href="css/main.css" />
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -49,18 +58,18 @@
 
 <body>
   <div id="octocat">
-    <a href="https://github.com/noahzemlin/hacklahoma20-idea1"><img src="assets/GitHub-Mark-64px.png"></a>
+    <a href="https://github.com/SarahBrown/hacklahoma20-idea3"><img src="assets/GitHub-Mark-64px.png"></a>
   </div>
 
-  <div id="leftSide">
+  <div id="textBox">
+    <p>
+        A Random, Crazy, Wacky, Mad Adventure!
+    </p>
 
+    <div id="madlib">
+      <p>You and your party stumble upon a (noun).  Upon future investigation, this (adj.) item was actually (name).  This person wanted you to go on a quest.  This quest was to be an adventure to obtain a (adj.) (fruit). However, this item was deep in the (compass direction) of (topographical feature).  Due to this difficult terrain you brought (name), (name), and (name) with you.</p> 
+    </div>
   </div>
-
-  <div id="middle">
-
-  </div>
-
-  <div id="rightSide">
     
 </body>
 
